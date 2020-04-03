@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WidgetSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Launch Widget Please!!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FHO-s1-xNO">
+                                <rect key="frame" x="79.5" y="194" width="255" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RF8-FM-YHD">
+                                <rect key="frame" x="93" y="352" width="228" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="pOV-bd-i3K"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wBf-oF-toD">
+                                <rect key="frame" x="44.5" y="259" width="325" height="48"/>
+                                <string key="text">If You Want Show App Data In Widget
+Type Here</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fH5-bZ-kO5">
+                                <rect key="frame" x="179" y="411" width="56" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="✓ Save">
+                                    <color key="titleColor" red="0.039215686270000001" green="0.039215686270000001" blue="0.58823529409999997" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IaD-ts-bHp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="fH5-bZ-kO5" firstAttribute="top" secondItem="RF8-FM-YHD" secondAttribute="bottom" constant="25" id="41S-zd-Kst"/>
+                            <constraint firstItem="wBf-oF-toD" firstAttribute="top" secondItem="FHO-s1-xNO" secondAttribute="bottom" constant="35" id="Ces-8v-yed"/>
+                            <constraint firstItem="fH5-bZ-kO5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EUx-eA-Y6t"/>
+                            <constraint firstItem="RF8-FM-YHD" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.55" id="KX2-a8-tRq"/>
+                            <constraint firstItem="FHO-s1-xNO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="MRe-43-rVG"/>
+                            <constraint firstItem="wBf-oF-toD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Zpy-mg-0Bv"/>
+                            <constraint firstItem="RF8-FM-YHD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="akT-pX-B3N"/>
+                            <constraint firstItem="FHO-s1-xNO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="blO-k1-e6T"/>
+                            <constraint firstItem="RF8-FM-YHD" firstAttribute="top" secondItem="wBf-oF-toD" secondAttribute="bottom" constant="45" id="tRQ-Am-gyq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="tfInput" destination="RF8-FM-YHD" id="gJ6-sL-1Or"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="139"/>
+        </scene>
+    </scenes>
+</document>
